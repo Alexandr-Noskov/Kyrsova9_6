@@ -1,0 +1,90 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$j3AhUodRE7gyxh791LamBn$0upmRM1difoZ6iFgytkA6+uTUhF4oPn3c1RXnr8et4c=",
+      "last_login": "2023-09-18T13:19:48.080Z",
+      "is_superuser": true,
+      "first_name": "Admin",
+      "last_name": "Adminov",
+      "is_staff": true,
+      "date_joined": "2023-09-07T10:47:05Z",
+      "email": "admin@sky.pro",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$uZGdflb5ZpQmpZQo16jEc9$XB5CWD6ZCLRwzGq1JHrOG/uTx2sl2lehxBLaNxLmE1c=",
+      "last_login": "2023-09-18T13:13:46.801Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "date_joined": "2023-09-07T13:19:55.126Z",
+      "email": "nathovaekaterina@yandex.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$gpEUppq1F3bNBZBw1L37pN$nXmI70SxqfGIcBv6y7Mqp6UlhcbhYdh9v5rLB684v3E=",
+      "last_login": "2023-09-18T13:16:37.327Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "date_joined": "2023-09-18T10:36:39Z",
+      "email": "manager@sky.pro",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_active": true,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$pkf8sTJ1QPHxAOdvMkV5zF$hWoRFhv9LveIchT43YG3iiP1N4kB5WS0iPYVuOAHtCU=",
+      "last_login": "2023-09-18T13:20:56.503Z",
+      "is_superuser": false,
+      "first_name": "Perms_Delete",
+      "last_name": "",
+      "is_staff": false,
+      "date_joined": "2023-09-18T13:18:50Z",
+      "email": "nathovaekaterina@gmail.com",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_active": true,
+      "groups": [],
+      "user_permissions": [
+        23,
+        27,
+        35,
+        31,
+        43
+      ]
+    }
+  }
+]

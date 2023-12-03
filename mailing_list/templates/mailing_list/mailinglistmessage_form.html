@@ -1,0 +1,25 @@
+{% extends 'mailing_list/base.html' %}
+{% block content %}
+
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn btn-success"
+                           value="{% if mailinglistmessage %}Сохранить{% else %}Создать{% endif %}">
+                    </a>
+                </form>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'mailing_list:message_list' %}" class="btn btn-primary"><< Назад</a>
+                {% if mailinglistmessage and user.is_staff or mailinglistmessage and perms.mailing_list.delete_message%}
+                    <a href="{% url 'mailing_list:message_delete' mailinglistmessage.pk %}"
+                       class="btn btn-danger float-right">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

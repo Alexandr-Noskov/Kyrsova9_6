@@ -1,0 +1,24 @@
+{% load mediapath %}
+<div class="col-4">
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{ object.title|truncatechars:20 }}</h4>
+        </div>
+        <div class="card-body">
+            <img src="{% mediapath object.preview %}" alt="Изображение" width="300" height="300"/>
+            <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                <li> {{ object.content|truncatechars:30 }} </li>
+            </ul>
+            <a class="btn btn-lg btn-block btn-outline-info"
+               href="{% url 'vlog:record_detail' object.slug %}">Подробнее</a>
+            {% if user.is_staff %}
+                <a href="{% url 'vlog:record_update' object.slug %}"
+                   class="btn btn-lg btn-block btn-outline-warning">Изменить/Удалить</a>
+            {% elif user.is_authenticated and object.author == user %}
+                <a href="{% url 'vlog:record_update' object.slug %}"
+                   class="btn btn-lg btn-block btn-outline-warning">Изменить</a>
+            {% endif %}
+            </a>
+        </div>
+    </div>
+</div>

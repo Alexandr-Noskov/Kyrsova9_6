@@ -1,0 +1,15 @@
+{% extends 'mailing_list/base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row text-center">
+            {% for object in record_list %}
+                {% include 'vlog/includes/inc_record_card.html' %}
+            {% endfor %}
+        </div>
+        <a href="{% url 'vlog:record_create' %}" class="btn btn-outline-success m-2">Создать запись</a>
+        <a href="{% url 'vlog:records' %}" class="btn btn-outline-primary m-2">Активные записи</a>
+        <a href="{% url 'vlog:records_deactivated' %}" class="btn btn-outline-secondary m-2">Деактивированные
+            записи</a>
+    </div>
+
+{% endblock %}

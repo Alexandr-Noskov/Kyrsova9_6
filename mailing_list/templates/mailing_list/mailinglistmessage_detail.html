@@ -1,0 +1,33 @@
+{% extends 'mailing_list/base.html' %}
+
+{% block content %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Тема письма:</td>
+                        <td>{{ mailinglistmessage.subject }} </td>
+                    </tr>
+                    <tr>
+                        <td>Сообщение:</td>
+                        <td>{{ mailinglistmessage.body }}</td>
+                    </tr>
+                    <tr>
+                        <td>Создано:</td>
+                        <td>{{ mailinglistmessage.created_time }}</td>
+                    </tr>
+                    <tr>
+                        <td>Создатель:</td>
+                        <td>{{ mailinglistmessage.created|default:'-' }}</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'mailing_list:message_list' %}" class="btn btn-primary"><< К списку рассылок</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

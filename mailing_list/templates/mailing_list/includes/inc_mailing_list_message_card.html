@@ -1,0 +1,26 @@
+<div class="col-4">
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{ object.subject|truncatechars:20 }}</h4>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title pricing-card-title">{{ object.body|truncatechars:45 }}</h5>
+            <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                <li> {{ object.created|default:'-' }} </li>
+            </ul>
+            <a class="btn btn-lg btn-block btn-outline-info"
+               href="{% url 'mailing_list:message_detail' object.pk %}">Информация</a>
+            {% if user.is_authenticated and object.created == user or user.is_staff %}
+                <a class="btn btn-lg btn-block btn-outline-warning"
+                   href="{% url 'mailing_list:message_update' object.pk %}">
+                    {% if user.is_staff or user.is_superuser %}
+                        Изменить/Удалить
+                    {% elif object.created == user %}
+                        Изменить
+                    {% endif %}
+                </a>
+            {% endif %}
+
+        </div>
+    </div>
+</div>

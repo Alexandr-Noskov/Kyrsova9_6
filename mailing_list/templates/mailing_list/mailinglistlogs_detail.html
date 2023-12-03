@@ -1,0 +1,33 @@
+{% extends 'mailing_list/base.html' %}
+
+{% block content %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Рассылка:</td>
+                        <td>{{ mailinglistlogs.sending }} </td>
+                    </tr>
+                    <tr>
+                        <td>Отправлена:</td>
+                        <td>{{ mailinglistlogs.send_time }}</td>
+                    </tr>
+                    <tr>
+                        <td>Статус:</td>
+                        <td>{{ mailinglistlogs.status }}</td>
+                    </tr>
+                    <tr>
+                        <td>Получатели:</td>
+                        <td>{{ mailinglistlogs.response|default:'-' }}</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'mailing_list:logs_list' %}" class="btn btn-primary"><< К логам</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

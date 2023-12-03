@@ -1,0 +1,35 @@
+{% extends 'mailing_list/base.html' %}
+{% block content %}
+
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn btn-success"
+                           value="{% if client %}Сохранить{% else %}Создать{% endif %}">
+                    {% if client %}
+                        <a href="{% url 'mailing_list:client_toggle_activity' client.pk %}"
+                           class="btn btn-warning float-right">
+                        {% if client.is_active %}
+                            Деактивировать
+                        {% else %}
+                            Активировать
+                        {% endif %}
+                    {% endif %}
+                    </a>
+                </form>
+
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'mailing_list:client_list' %}" class="btn btn-primary"><< Назад</a>
+                {% if client and user.is_staff or client and perms.mailing_list.delete_client %}
+                    <a href="{% url 'mailing_list:client_delete' client.pk %}"
+                       class="btn btn-danger float-right">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

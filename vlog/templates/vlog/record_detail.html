@@ -1,0 +1,37 @@
+{% extends 'mailing_list/base.html' %}
+{% load mediapath %}
+{% block content %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Заголовок</td>
+                        <td>{{ record.title }} </td>
+                    </tr>
+                    <tr>
+                        <td>Содержимое</td>
+                        <td>{{ record.content }}</td>
+                    </tr>
+                    <tr>
+                        <td>Дата создания::</td>
+                        <td>{{ record.created }}</td>
+                    </tr>
+                    <tr>
+                        <td>Количество просмотров:</td>
+                        <td>{{ record.views }}</td>
+                    </tr>
+                    <tr>
+                        <td>Автор:</td>
+                        <td>{{ record.author|default:"-" }}</td>
+                    </tr>
+                    <img src="{% mediapath object.preview %}" alt="Изображение" width="500" height="500" />
+                </table>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'vlog:records' %}" class="btn btn-primary"><< Назад</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

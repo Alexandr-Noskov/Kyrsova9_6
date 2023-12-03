@@ -1,0 +1,48 @@
+{% extends 'mailing_list/base.html' %}
+{% block content %}
+
+    <div class="container">
+        <div class="pricing-header px-1 py-1 pt-md-1 pb-md-2 mx-auto text-center">
+            <p class="lead">{{ title_0 }}</p>
+        </div>
+        <div class="row text-center">
+            {% for object in mailing_list_messages %}
+                {% include 'mailing_list/includes/inc_mailing_list_message_card.html' with object=object %}
+            {% endfor %}
+        </div>
+        <div class="pricing-header px-1 py-1 pt-md-1 pb-md-2 mx-auto text-center">
+            <p class="lead">{{ title_1 }}</p>
+            <div class="row text-center">
+                {% for object in mailing_lists %}
+                    {% include 'mailing_list/includes/inc_mailing_list_card.html' with object=object %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="pricing-header px-1 py-1 pt-md-1 pb-md-2 mx-auto text-center">
+            <p class="lead">{{ title_2 }}</p>
+            <div class="row text-center">
+                {% for object in client_list %}
+                    {% include 'mailing_list/includes/inc_client_card.html' with object=object %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="pricing-header px-1 py-1 pt-md-1 pb-md-2 mx-auto text-center">
+            <p class="lead">{{ title_logs}}</p>
+            <div class="row text-center">
+                {% for object in logs_list %}
+                    {% include 'mailing_list/includes/inc_log_card.html' with object=object %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="pricing-header px-1 py-1 pt-md-1 pb-md-2 mx-auto text-center">
+            <p class="lead">{{ title_records }}</p>
+            <div class="row text-center">
+                {% for object in records_list %}
+                    {% include 'vlog/includes/inc_record_card.html' with object=object %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

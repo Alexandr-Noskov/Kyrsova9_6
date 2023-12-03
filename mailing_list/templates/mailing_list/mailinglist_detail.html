@@ -1,0 +1,45 @@
+{% extends 'mailing_list/base.html' %}
+
+{% block content %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Сообщение:</td>
+                        <td>{{ mailinglist.message }} </td>
+                    </tr>
+                    <tr>
+                        <td>Периодичность:</td>
+                        <td>{{ mailinglist.periodicity }}</td>
+                    </tr>
+                    <tr>
+                        <td>Начало:</td>
+                        <td>{{ mailinglist.start }}</td>
+                    </tr>
+                    <tr>
+                        <td>Конец:</td>
+                        <td>{{ mailinglist.finish }}</td>
+                    </tr>
+                    <tr>
+                        <td>Статус:</td>
+                        <td>{{ mailinglist.status }}</td>
+                    </tr>
+                    <tr>
+                        <td>Время создания:</td>
+                        <td>{{ mailinglist.time }}</td>
+                    </tr>
+                    <tr>
+                        <td>Создана:</td>
+                        <td>{{ mailinglist.created|default:'системой' }}</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'mailing_list:mailing_lists_list' %}" class="btn btn-primary"><< К настройке рассылок</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

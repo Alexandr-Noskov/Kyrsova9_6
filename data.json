@@ -1,0 +1,202 @@
+[
+  {
+    "model": "mailing_list.client",
+    "pk": 1,
+    "fields": {
+      "first_name": "Petr",
+      "last_name": "Petrov",
+      "surname": null,
+      "email": "petrov@sky.pro",
+      "created": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mailing_list.client",
+    "pk": 7,
+    "fields": {
+      "first_name": "Ivan",
+      "last_name": "Ivanov",
+      "surname": null,
+      "email": "ivanov@sky.pro",
+      "created": null,
+      "is_active": false
+    }
+  },
+  {
+    "model": "mailing_list.client",
+    "pk": 9,
+    "fields": {
+      "first_name": "Anna",
+      "last_name": "Annovna",
+      "surname": null,
+      "email": "annovna@sky.pro",
+      "created": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mailing_list.client",
+    "pk": 10,
+    "fields": {
+      "first_name": "Dmitriy",
+      "last_name": "Dmitriev",
+      "surname": null,
+      "email": "dmitriev@sky.pro",
+      "created": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistmessage",
+    "pk": 1,
+    "fields": {
+      "subject": "Тестовая рассылка",
+      "body": "Тестовая рассылка для заполнения фикстур",
+      "created_time": "2023-09-07T10:52:29.082Z",
+      "created": null
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistmessage",
+    "pk": 2,
+    "fields": {
+      "subject": "Создание рассылки в браузере",
+      "body": "Проверка возможности создания рассылки внутри приложения",
+      "created_time": "2023-09-10T09:32:46.842Z",
+      "created": null
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistmessage",
+    "pk": 4,
+    "fields": {
+      "subject": "Рассылка для рабочего стола",
+      "body": "Создание рассылки для заполнения БД (чтобы было более 3з объектов данной модели)",
+      "created_time": "2023-09-10T09:46:20.603Z",
+      "created": null
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistmessage",
+    "pk": 5,
+    "fields": {
+      "subject": "Рассылка от пользователя",
+      "body": "Пример рассылки от пользователя для проверки доступа",
+      "created_time": "2023-09-18T12:16:52.324Z",
+      "created": 2
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistmessage",
+    "pk": 6,
+    "fields": {
+      "subject": "Пример 2 рассылки от пользователя",
+      "body": "Второй пример рассылки после добавления функционала",
+      "created_time": "2023-09-18T12:27:36.104Z",
+      "created": 2
+    }
+  },
+  {
+    "model": "mailing_list.mailinglist",
+    "pk": 1,
+    "fields": {
+      "message": 1,
+      "time": "13:52:31",
+      "start": "2023-09-07T13:52:31Z",
+      "finish": "2023-09-07T13:52:31Z",
+      "periodicity": "разовая",
+      "status": "завершена",
+      "created": 1
+    }
+  },
+  {
+    "model": "mailing_list.mailinglist",
+    "pk": 2,
+    "fields": {
+      "message": 2,
+      "time": "14:46:37",
+      "start": "2023-09-10T14:46:37Z",
+      "finish": "2024-09-10T00:00:00Z",
+      "periodicity": "ежедневно",
+      "status": "создана",
+      "created": 1
+    }
+  },
+  {
+    "model": "mailing_list.mailinglist",
+    "pk": 3,
+    "fields": {
+      "message": 4,
+      "time": "14:48:38",
+      "start": "2023-09-10T14:48:38Z",
+      "finish": "2023-09-10T14:48:38Z",
+      "periodicity": "ежемесячно",
+      "status": "создана",
+      "created": 1
+    }
+  },
+  {
+    "model": "mailing_list.mailinglist",
+    "pk": 6,
+    "fields": {
+      "message": 5,
+      "time": "15:49:19",
+      "start": "2023-09-18T15:49:19Z",
+      "finish": "2023-09-29T15:49:19Z",
+      "periodicity": "ежедневно",
+      "status": "создана",
+      "created": 2
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistlogs",
+    "pk": 1,
+    "fields": {
+      "sending": 1,
+      "send_time": "2023-09-07T10:52:52.823Z",
+      "status": "delivered",
+      "response": ""
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistlogs",
+    "pk": 2,
+    "fields": {
+      "sending": 1,
+      "send_time": "2023-09-18T10:13:09.034Z",
+      "status": "delivered",
+      "response": "['annovna@sky.pro', 'dmitriev@sky.pro', 'ivanov@sky.pro', 'petrov@sky.pro']"
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistlogs",
+    "pk": 3,
+    "fields": {
+      "sending": 1,
+      "send_time": "2023-09-18T10:13:09.577Z",
+      "status": "delivered",
+      "response": "['annovna@sky.pro', 'dmitriev@sky.pro', 'ivanov@sky.pro', 'petrov@sky.pro']"
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistlogs",
+    "pk": 4,
+    "fields": {
+      "sending": 1,
+      "send_time": "2023-09-18T10:13:10.238Z",
+      "status": "delivered",
+      "response": "['annovna@sky.pro', 'dmitriev@sky.pro', 'ivanov@sky.pro', 'petrov@sky.pro']"
+    }
+  },
+  {
+    "model": "mailing_list.mailinglistlogs",
+    "pk": 5,
+    "fields": {
+      "sending": 1,
+      "send_time": "2023-09-18T10:13:45.846Z",
+      "status": "delivered",
+      "response": "['annovna@sky.pro', 'dmitriev@sky.pro', 'ivanov@sky.pro', 'petrov@sky.pro']"
+    }
+  }
+]

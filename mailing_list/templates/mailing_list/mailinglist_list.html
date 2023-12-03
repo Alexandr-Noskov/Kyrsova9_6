@@ -1,0 +1,18 @@
+{% extends 'mailing_list/base.html' %}
+{% block content %}
+
+    <div class="pricing-header px-1 py-1 pt-md-1 pb-md-2 mx-auto text-center">
+        <p class="lead">{{ title }}</p>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+            {% for object in object_list %}
+                {% include 'mailing_list/includes/inc_mailing_list_card.html' with object=object %}
+            {% endfor %}
+        </div>
+        <a href="{% url 'mailing_list:mailing_list_create' %}" class="btn btn-outline-primary m-2">Новая
+            конфигурация</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'mailing_list/base.html' %}
+
+{% block content %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn btn-success"
+                           value="{% if object %}Сохранить{% else %}Создать{% endif %}">
+                    {% if object %}
+                        <a href="{% url 'vlog:toggle_activity' object.slug %}"
+                           class="btn btn-warning float-right">
+                        {% if object.sign_of_publication %}
+                            Деактивировать
+                        {% else %}
+                            Активировать
+                        {% endif %}
+                    {% endif %}
+                    </a>
+                </form>
+
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'vlog:records' %}" class="btn btn-primary"><< Назад</a>
+                {% if record and user.is_staff or record and perms.vlog.delete_record %}
+                    <a href="{% url 'vlog:record_delete' object.slug %}" class="btn btn-danger float-right">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,86 @@
+[
+  {
+    "model": "vlog.record",
+    "pk": 1,
+    "fields": {
+      "title": "Тест",
+      "slug": "test",
+      "content": "Тест создания записи",
+      "preview": "images/records/219883-email-envelope_original1-800x800.jpg",
+      "created": "2023-09-07",
+      "sign_of_publication": true,
+      "views": 18,
+      "author": 1
+    }
+  },
+  {
+    "model": "vlog.record",
+    "pk": 3,
+    "fields": {
+      "title": "Запись 2",
+      "slug": "record_2",
+      "content": "Запись для наполнения списка записей",
+      "preview": "images/records/clipart-post-12.png",
+      "created": "2023-09-07",
+      "sign_of_publication": true,
+      "views": 4,
+      "author": 1
+    }
+  },
+  {
+    "model": "vlog.record",
+    "pk": 4,
+    "fields": {
+      "title": "Запись 3",
+      "slug": "record_3",
+      "content": "Для заполнения списка записей",
+      "preview": "images/records/czzEXW4nz-LoAtabZ5850YXXXL4j3HpexhjNOf_P3YmryPKwJ94QGRtDb3Sbc6KY.jpg",
+      "created": "2023-09-07",
+      "sign_of_publication": true,
+      "views": 3,
+      "author": 1
+    }
+  },
+  {
+    "model": "vlog.record",
+    "pk": 5,
+    "fields": {
+      "title": "Тест Неактивная",
+      "slug": "test_inactive",
+      "content": "Тест для проверки работы активности/неактивности записи",
+      "preview": "images/records/EqazPKkfLFg.jpg",
+      "created": "2023-09-07",
+      "sign_of_publication": false,
+      "views": 0,
+      "author": 1
+    }
+  },
+  {
+    "model": "vlog.record",
+    "pk": 6,
+    "fields": {
+      "title": "Тест создания записи пользователем",
+      "slug": "user_test",
+      "content": "Тест для проверки прав пользователя",
+      "preview": "images/records/maxresdefault-4.jpg",
+      "created": "2023-09-07",
+      "sign_of_publication": true,
+      "views": 11,
+      "author": 2
+    }
+  },
+  {
+    "model": "vlog.record",
+    "pk": 7,
+    "fields": {
+      "title": "Тест делитера",
+      "slug": "deleter_test",
+      "content": "Запись для проверки работы perms_delete",
+      "preview": "images/records/Posting-to-Social.jpg",
+      "created": "2023-09-07",
+      "sign_of_publication": true,
+      "views": 1,
+      "author": 4
+    }
+  }
+]
